@@ -56,7 +56,7 @@ const handleMapClick = e => {
 
 ## How to run this project:
 
-- Clone to your own local mcahine by running `Git Clone https://github.com/espinalk212/struction-site-challenge.git` in the terminal
+- Clone to your own local machine by running `Git Clone https://github.com/espinalk212/struction-site-challenge.git` in the terminal
 
 - Run `npm install` to install dependencies
 
