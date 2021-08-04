@@ -8,10 +8,11 @@ import Footer from './Footer';
 function App() {
   const [image, setImage] = useState('');
   const [markers, setMarkers] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const markerRef = useRef(null);
 
   useLayoutEffect(() => {
+    setIsLoading(true);
     // fetch the data appended to my cors anywhere server (allows for CORS)
     fetch(
       'https://serene-beach-45833.herokuapp.com/https://front-end-programming-challenge.s3.amazonaws.com/floor_plans/1340/1340.json'
@@ -24,9 +25,9 @@ function App() {
         setImage(data.image_url);
         // store markers in the state
         setMarkers(data.markers);
-        // set loading to false as our data is now back
-        setIsLoading(false);
-      });
+      })
+      .catch(err => console.log(err)) // just in case we have any errors
+      .finally(() => setIsLoading(false)); // set loading to false
   }, []);
 
   // create the leaflet icon
