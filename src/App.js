@@ -111,7 +111,7 @@ function App() {
           {markers.map(marker => {
             return (
               <Marker
-                key={marker.id}
+                key={marker.uuid}
                 icon={siteIcon}
                 draggable={true}
                 position={[marker.x, marker.y]}
