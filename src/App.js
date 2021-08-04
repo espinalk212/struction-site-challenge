@@ -72,10 +72,10 @@ function App() {
 
   const handleMapClick = e => {
     const { lat: x, lng: y } = e.latlng; // get coordinates from event
-    const id = Math.round(Math.random() * 10000); // create a bogus id
+    const uuid = Math.round(Math.random() * 10000).toString(); // create a bogus id
     const image_full = null;
     // 'https://front-end-programming-challenge.s3.amazonaws.com/photos/eb5afacd-7070-4426-a881-a4ea2be08ba0.jpg'; // set a default img
-    const newMarker = { id, x, y, image_full };
+    const newMarker = { uuid, x, y, image_full };
     setMarkers([newMarker, ...markers]); // add new marker to state
   };
 
