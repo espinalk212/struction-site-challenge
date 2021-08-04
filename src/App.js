@@ -86,7 +86,7 @@ function App() {
         <h1>StructionSite</h1>
       </div>
       {isLoading ? (
-        <LoaderMessage>Loading map ...</LoaderMessage>
+        <LoaderMessage />
       ) : (
         <MapContainer
           className="mapContainer"

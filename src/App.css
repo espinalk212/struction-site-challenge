@@ -76,6 +76,15 @@ orange-dark: #bd3b00 */
   color: var(--text);
 }
 
+.loaderContainer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: var(--secondary);
+  color: var(--text);
+  min-height: 60vh;
+  min-width: 100vw;
+}
+
 ul {
   list-style: none;
 }
